@@ -1,7 +1,12 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
+import java.time.Duration;
+
+public class RegisterPage {
 
     private WebDriver driver;
 
@@ -18,7 +23,7 @@ public class LoginPage {
     private By confirmPasswordLocator = By.id("repeatedPassword");
     private By clickConfirmButton = By.cssSelector("td input.button");
 
-    public LoginPage(WebDriver driver) {
+    public RegisterPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -70,9 +75,24 @@ public class LoginPage {
         driver.findElement(clickConfirmButton).click();
     }
 
+    //for the assert
     private By loginSuccessLocator = By.partialLinkText("Your account was created successfully.");
 
     public String getLoginSuccessMessage() {
         return driver.findElement(loginSuccessLocator).getText();
     }
+
+    //for creating an extra account
+    private By openNewAccountLocator = By.cssSelector("a[href=\"openaccount.htm\"]");
+
+    public void clickOpenNewAccount() {
+        driver.findElement(openNewAccountLocator).click();
+    }
+
+    private By openAccountLocator = By.cssSelector("input[value='Open New Account']");
+
+    public void clickOpenNewAccountClickFinish() {
+        driver.findElement(openAccountLocator).click();
+    }
+
 }

@@ -25,4 +25,4 @@ This project involves automating the testing of the **Parabank Registration Site
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/final-project.git
+git clone https://github.com/RominaCaballero/AutomationBootcampProject.git

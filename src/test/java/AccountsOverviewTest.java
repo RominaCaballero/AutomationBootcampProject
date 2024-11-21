@@ -43,7 +43,7 @@ public class AccountsOverviewTest extends BaseTest {
         accountsOverviewPage.clickFirstAccount();
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -70,8 +70,7 @@ public class AccountsOverviewTest extends BaseTest {
         accountsOverviewPage.clickSecondAccount();
 
         try {
-            // Wait for 5 seconds (5000 milliseconds)
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

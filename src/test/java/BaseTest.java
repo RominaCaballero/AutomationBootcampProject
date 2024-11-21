@@ -11,6 +11,7 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
+        //we have to login with our already created username in order to do our tests
         driver = new ChromeDriver();
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
 

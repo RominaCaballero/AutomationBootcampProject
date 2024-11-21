@@ -75,21 +75,20 @@ public class RegisterPage {
         driver.findElement(clickConfirmButton).click();
     }
 
-    // for the assert
+    // locators for the assert
     private By loginSuccessLocator = By.partialLinkText("Your account was created successfully.");
 
     public String getLoginSuccessMessage() {
         return driver.findElement(loginSuccessLocator).getText();
     }
 
-    // for creating an extra account
+    // locators for creating an extra account
     private By openNewAccountLocator = By.cssSelector("a[href=\"openaccount.htm\"]");
+    private By openAccountLocator = By.cssSelector("input[value='Open New Account']");
 
     public void clickOpenNewAccount() {
         driver.findElement(openNewAccountLocator).click();
     }
-
-    private By openAccountLocator = By.cssSelector("input[value='Open New Account']");
 
     public void clickOpenNewAccountClickFinish() {
         driver.findElement(openAccountLocator).click();

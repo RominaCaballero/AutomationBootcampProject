@@ -14,11 +14,13 @@ public class PreRequisiteRegisterPage {
 
     @Test
     public void testRegisterSuccesfulPreRequisites(){
+        // Go to the register page first to create an account
         WebDriver driver = new ChromeDriver();
         driver.get("https://parabank.parasoft.com/parabank/register.htm");
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
+        // Fill all the required fields
         RegisterPage RegisterPage = new RegisterPage(driver);
         RegisterPage.setFirstName("Mina");
         RegisterPage.setLastName("Caballero");
@@ -34,14 +36,15 @@ public class PreRequisiteRegisterPage {
 
         RegisterPage.clickConfirmButton();
 
+        // Confirm our registration was successful and we got redirected to the right page
         String expectedUrl = "https://parabank.parasoft.com/parabank/register.htm";
         assertEquals(expectedUrl, driver.getCurrentUrl());
 
+        // Open a new account since is a prerequisite in our test cases
         RegisterPage.clickOpenNewAccount();
 
         try {
-            // Wait for 5 seconds (5000 milliseconds)
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

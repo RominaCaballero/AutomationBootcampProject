@@ -37,11 +37,24 @@ public class AccountsOverviewPage {
         select.selectByVisibleText(activityName);
     }
 
-
-
     public void clickAccountActivityButton() {
         driver.findElement(accountActivityButton).click();
     }
 
+    private By accountNumberLocator = By.id("accountId");
 
+    public String getAccountNumber() {
+        return driver.findElement(accountNumberLocator).getText();
+    }
+
+    private By accountDetailsLocator = By.cssSelector("h1.title ");
+
+    public String getAccountDetails() {
+        return driver.findElement(accountDetailsLocator).getText();
+    }
+
+    private By noAccountsMessageLocator = By.xpath("//b[text()='No transactions found.']");
+    public String getNoAccountsMessage() {
+        return driver.findElement(noAccountsMessageLocator).getText();
+    }
 }

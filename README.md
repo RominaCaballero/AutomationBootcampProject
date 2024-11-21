@@ -15,6 +15,10 @@ This project involves automating the testing of the **Parabank Registration Site
 - **BM-T6**: Account link redirects user to correct account details page.
 - **BM-T9**: Basic navigation through the site.
 
+## How to Use
+- Before each test session, if we dont have an account or the account has been deleted from the site we have to run the PreRequisiteRegisterPage to create our account log in and also a savings account.
+- If we already have the user we can run the tests in AccountsOverviewTest that are named after the test cases in Zephyr.
+
 ## Setup Instructions
 
 ### Prerequisites

@@ -34,11 +34,8 @@ public class PreRequisiteRegisterPage {
 
         RegisterPage.clickConfirmButton();
 
-        String expectedUrl = "https://parabank.parasoft.com/parabank/register.htm"; //when logged in we get the same URL
+        String expectedUrl = "https://parabank.parasoft.com/parabank/register.htm";
         assertEquals(expectedUrl, driver.getCurrentUrl());
-        //assertEquals("Your account was created successfully. You are now logged in.", RegisterPage.getLoginSuccessMessage());
-
-        //create one more account
 
         RegisterPage.clickOpenNewAccount();
 

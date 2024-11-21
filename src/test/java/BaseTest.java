@@ -19,12 +19,11 @@ public class BaseTest {
         loginPage.setPasswordLocator("12345");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         loginPage.clickLoginButton();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
-//    @AfterEach
-//    public void clean() {
-//        driver.quit();
-//    }
+    @AfterEach
+    public void clean() {
+        driver.quit();
+    }
 
 }
